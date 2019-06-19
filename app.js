@@ -94,6 +94,10 @@ const App = new class {
         const buf = new Reader(packet);
         const opCode = buf.readUInt8();
         switch (opCode) {
+            case 32:
+                const id = buf.readUInt32();
+                this.playerids.add(id);
+                break;
             case 241:
                 this.protocolKey = buf.readUInt32();
                 console.info("Received protocol key: " + this.protocolKey);
