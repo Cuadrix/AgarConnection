@@ -1,0 +1,21 @@
+{
+  "name": "agar-connection",
+  "description": "AgarConnection",
+  "version": "1.0.1",
+  "scripts": {
+    "watch": "webpack --watch --mode=development",
+    "start": "webpack --mode=production"
+  },
+  "devDependencies": {
+    "@types/murmurhash-js": "^1.0.3",
+    "clean-webpack-plugin": "^3.0.0",
+    "murmurhash-js": "^1.0.0",
+    "ts-loader": "^6.0.4",
+    "tslint": "^5.20.1",
+    "tslint-webpack-plugin": "^2.1.0",
+    "typescript": "^3.5.3",
+    "webpack": "^4.39.2",
+    "webpack-cli": "^3.3.7",
+    "webpack-dev-server": "^3.8.0"
+  }
+}
