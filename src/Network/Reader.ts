@@ -64,23 +64,10 @@ class Reader {
 		return ue;
 	}
 
-	public readUTF8stringHSLO() {
-		let str: string = "";
-		const count = this.readUInt8();
-		for (let i = 0; i < count; i++) {
-			const char = this.readUInt8();
-			str += String.fromCharCode(char);
-		}
-		return str;
-	}
 
-	public readEscapedUTF8string(hslo: boolean = false) {
+	public readEscapedUTF8string() {
 		let ue: string;
-		if (hslo === true) {
-			ue = this.readUTF8stringHSLO();
-		} else {
-			ue = this.readUTF8string();
-		}
+		ue = this.readUTF8string();
 		return decodeURIComponent(escape(ue));
 	}
 
@@ -94,23 +81,9 @@ class Reader {
 		return ue;
 	}
 
-	public readUTF16stringHSLO() {
-		let str: string = "";
-		const count = this.readUInt8();
-		for (let i = 0; i < count; i++) {
-			const char = this.readUInt16();
-			str += String.fromCharCode(char);
-		}
-		return str;
-	}
-
-	public readEscapedUTF16string(hslo: boolean = false) {
+	public readEscapedUTF16string() {
 		let ue: string;
-		if (hslo === true) {
-			ue = this.readUTF16stringHSLO();
-		} else {
-			ue = this.readUTF16string();
-		}
+		ue = this.readUTF16string();
 		return decodeURIComponent(escape(ue));
 	}
 
