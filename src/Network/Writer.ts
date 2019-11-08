@@ -64,15 +64,6 @@ class Writer {
 		for (let i = 0; i < msg.length; i++) { this.writeUInt16(msg.charCodeAt(i)); }
 		this.writeUInt16(0);
 	}
-	public writeStringHSLO(msg: string): void {
-		this.writeUInt8(msg.length);
-		for (let i = 0; i < msg.length; i++) { this.writeUInt8(msg.charCodeAt(i)); }
-	}
-
-	public writeString16HSLO(msg: string): void {
-		this.writeUInt8(msg.length);
-		for (let i = 0; i < msg.length; i++) { this.writeUInt16(msg.charCodeAt(i)); }
-	}
 
 }
 export { Writer };
